@@ -1,0 +1,373 @@
+(this.webpackJsonpui = this.webpackJsonpui || []).push([
+    [0], {
+        227: function(e, n, t) {
+            "use strict";
+            (function(e) {
+                var r = t(12),
+                    c = t(1),
+                    o = t.n(c),
+                    a = t(6),
+                    s = t(13),
+                    i = t(2),
+                    l = t(143),
+                    u = t(140),
+                    b = t(428),
+                    f = t(429),
+                    j = t(144),
+                    d = t(430),
+                    m = t(431),
+                    h = t(432),
+                    p = t(433),
+                    O = t(434),
+                    x = t(426),
+                    k = t(427),
+                    N = t(150),
+                    g = t(17),
+                    w = t(3),
+                    v = t(101),
+                    y = (t(294), t(7)),
+                    S = new g.c("33WpnV5svKsWgfg11PbywWGCzXGGVEASSEv8k7komLtx"),
+                    C = new g.c("7K4cE8o4cYHpFNsw8KdrjoB6hMzvwiiNXST2qhN8DMwt"),
+                    T = new g.c("CwMLPkQNn8UvKxQtwiVPUtGeGEAUwcrhcfb9JSf4C42x"),
+                    W = new g.c("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+                    B = new g.c("ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"),
+                    A = new g.c("SysvarRent111111111111111111111111111111111"),
+                    F = function(n) {
+                        var t = n.amount,
+                            r = Object(l.b)().connection,
+                            c = Object(u.b)(),
+                            b = (c.connect, c.connected),
+                            f = (c.wallet, c.publicKey),
+                            j = c.sendTransaction,
+                            d = c.disconnect,
+                            m = Object(i.useState)(!1),
+                            h = Object(s.a)(m, 2),
+                            p = h[0],
+                            O = h[1];
+                        return Object(y.jsxs)(y.Fragment, {
+                            children: [b ? Object(y.jsxs)(y.Fragment, {
+                                children: [Object(y.jsx)("button", {
+                                    className: "form-btn",
+                                    onClick: function(n) {
+                                        n.preventDefault();
+                                        var c = new Promise(function() {
+                                            var n = Object(a.a)(o.a.mark((function n(c, a) {
+                                                var s, i, l, u, b, d, m, h, p, x, k, N;
+                                                return o.a.wrap((function(n) {
+                                                    for (;;) switch (n.prev = n.next) {
+                                                        case 0:
+                                                            return O(!0), n.prev = 1, s = (new TextEncoder).encode("vault"), n.next = 5, g.c.findProgramAddress([s], S);
+                                                        case 5:
+                                                            return i = n.sent[0], n.next = 8, g.c.findProgramAddress([i.toBuffer(), W.toBuffer(), T.toBuffer()], B);
+                                                        case 8:
+                                                            return l = n.sent[0], n.next = 11, g.c.findProgramAddress([f.toBuffer(), W.toBuffer(), T.toBuffer()], B);
+                                                        case 11:
+                                                            return u = n.sent[0], b = (new TextEncoder).encode("price"), n.next = 15, g.c.findProgramAddress([b], S);
+                                                        case 15:
+                                                            return d = n.sent[0], m = new g.e({
+                                                                feePayer: f
+                                                            }), h = [{
+                                                                pubkey: f,
+                                                                isSigner: !0,
+                                                                isWritable: !0
+                                                            }, {
+                                                                pubkey: g.d.programId,
+                                                                isSigner: !1,
+                                                                isWritable: !0
+                                                            }, {
+                                                                pubkey: i,
+                                                                isSigner: !1,
+                                                                isWritable: !0
+                                                            }, {
+                                                                pubkey: l,
+                                                                isSigner: !1,
+                                                                isWritable: !0
+                                                            }, {
+                                                                pubkey: T,
+                                                                isSigner: !1,
+                                                                isWritable: !1
+                                                            }, {
+                                                                pubkey: W,
+                                                                isSigner: !1,
+                                                                isWritable: !1
+                                                            }, {
+                                                                pubkey: A,
+                                                                isSigner: !1,
+                                                                isWritable: !1
+                                                            }, {
+                                                                pubkey: B,
+                                                                isSigner: !1,
+                                                                isWritable: !1
+                                                            }, {
+                                                                pubkey: C,
+                                                                isSigner: !1,
+                                                                isWritable: !0
+                                                            }, {
+                                                                pubkey: u,
+                                                                isSigner: !1,
+                                                                isWritable: !0
+                                                            }, {
+                                                                pubkey: d,
+                                                                isSigner: !1,
+                                                                isWritable: !0
+                                                            }], p = Object(w.struct)([Object(w.u8)("instruction"), Object(w.nu64)("amount")]), x = e.alloc(1024), k = p.encode({
+                                                                instruction: 1,
+                                                                amount: t
+                                                            }, x), x = x.slice(0, k), m.add(new g.f({
+                                                                keys: h,
+                                                                programId: S,
+                                                                data: x
+                                                            })), n.next = 25, j(m, r);
+                                                        case 25:
+                                                            return N = n.sent, v.b.info("Transaction has been sent"), n.next = 29, r.confirmTransaction(N, "confirmed");
+                                                        case 29:
+                                                            c(), n.next = 36;
+                                                            break;
+                                                        case 32:
+                                                            n.prev = 32, n.t0 = n.catch(1), console.error(n.t0), a();
+                                                        case 36:
+                                                            O(!1);
+                                                        case 37:
+                                                        case "end":
+                                                            return n.stop()
+                                                    }
+                                                }), n, null, [
+                                                    [1, 32]
+                                                ])
+                                            })));
+                                            return function(e, t) {
+                                                return n.apply(this, arguments)
+                                            }
+                                        }());
+                                        v.b.promise(c, {
+                                            pending: "Making transaction...",
+                                            success: "Transaction has been confirmed",
+                                            error: "Transaction failed"
+                                        })
+                                    },
+                                    disabled: p,
+                                    children: p ? "Minting..." : "Mint"
+                                }), Object(y.jsx)("button", {
+                                    className: "form-btn form-btn--secondary",
+                                    onClick: function(e) {
+                                        e.preventDefault(), d()
+                                    },
+                                    children: "Disconnect Wallet"
+                                })]
+                            }) : Object(y.jsx)(N.a, {
+                                className: "form-btn",
+                                children: "Connect Wallet"
+                            }), Object(y.jsx)(v.a, {
+                                theme: "dark",
+                                position: "bottom-left",
+                                hideProgressBar: !0,
+                                pauseOnFocusLoss: !1,
+                                pauseOnHover: !1
+                            })]
+                        })
+                    },
+                    P = function(e) {
+                        var n = e.amount,
+                            t = j.b.Mainnet,
+                            r = Object(i.useMemo)((function() {
+                                return [Object(d.a)(), Object(m.a)(), Object(h.a)(), Object(p.a)({
+                                    options: {
+                                        clientId: "Get a client ID @ https://developer.tor.us"
+                                    }
+                                }), Object(O.a)(), Object(x.a)({
+                                    network: t
+                                }), Object(k.a)({
+                                    network: t
+                                })]
+                            }), [t]);
+                        return Object(y.jsx)(b.a, {
+                            endpoint: "https://green-damp-firefly.solana-mainnet.discover.quiknode.pro/332351c3d16a357b59216898ff8e4bbf054daf5e/",
+                            children: Object(y.jsx)(f.a, {
+                                wallets: r,
+                                autoConnect: !0,
+                                children: Object(y.jsx)(N.b, {
+                                    children: Object(y.jsx)(F, {
+                                        amount: n
+                                    })
+                                })
+                            })
+                        })
+                    };
+                n.a = function() {
+                    var e = Object(i.useState)({
+                            from: .01,
+                            to: 1
+                        }),
+                        n = Object(s.a)(e, 2),
+                        t = n[0],
+                        c = n[1],
+                        o = function(e) {
+                            e.preventDefault();
+                            var n, t, r = e.target,
+                                o = r.name,
+                                a = r.value;
+                            a < 0 ? (n = 0, t = 0) : "from" === o ? (n = a, t = parseInt(a / .01)) : (n = Number((.01 * a).toFixed(9)), t = a), c({
+                                from: n,
+                                to: t
+                            })
+                        },
+                        a = function(e) {
+                            t.to < 1 ? c({
+                                from: .001,
+                                to: 1
+                            }) : t.to !== parseInt(t.to) ? c({
+                                from: Number((.001 * parseInt(t.to)).toFixed(9)),
+                                to: parseInt(t.to)
+                            }) : 1e3 * t.from !== t.to && c(Object(r.a)(Object(r.a)({}, t), {}, {
+                                from: t.to / 1e3
+                            }))
+                        };
+                    return Object(y.jsxs)("div", {
+                        className: "card",
+                        children: [Object(y.jsx)("h3", {
+                            className: "card-title",
+                            children: "Karma Nirvami Token $ KaNi"
+                        }), Object(y.jsx)("p", {
+                            className: "card-description",
+                            children: "Make sure you have enough SOL and then choose the amount of $KaNi."
+                        }), Object(y.jsxs)("form", {
+                            className: "form",
+                            children: [Object(y.jsx)("p", {
+                                className: "form-helper",
+                                children: "You Pay"
+                            }), Object(y.jsxs)("div", {
+                                className: "form-group",
+                                children: [Object(y.jsx)("label", {
+                                    className: "form-label",
+                                    children: "SOL"
+                                }), Object(y.jsx)("input", {
+                                    className: "form-input",
+                                    name: "from",
+                                    type: "number",
+                                    value: t.from,
+                                    onChange: o,
+                                    onBlur: a
+                                })]
+                            }), Object(y.jsx)("p", {
+                                className: "form-helper",
+                                children: "You Receive"
+                            }), Object(y.jsxs)("div", {
+                                className: "form-group",
+                                children: [Object(y.jsx)("label", {
+                                    className: "form-label",
+                                    children: "KaNi"
+                                }), Object(y.jsx)("input", {
+                                    className: "form-input",
+                                    name: "to",
+                                    type: "number",
+                                    value: t.to,
+                                    onChange: o,
+                                    onBlur: a
+                                })]
+                            }), Object(y.jsx)("div", {
+                                className: "form-footer",
+                                children: Object(y.jsx)(P, {
+                                    amount: t.to
+                                })
+                            })]
+                        })]
+                    })
+                }
+            }).call(this, t(4).Buffer)
+        },
+        247: function(e, n) {},
+        248: function(e, n) {},
+        274: function(e, n) {},
+        275: function(e, n) {},
+        297: function(e, n) {},
+        299: function(e, n) {},
+        309: function(e, n) {},
+        311: function(e, n) {},
+        341: function(e, n) {},
+        343: function(e, n) {},
+        350: function(e, n) {},
+        351: function(e, n) {},
+        367: function(e, n) {},
+        369: function(e, n) {},
+        378: function(e, n) {},
+        380: function(e, n) {},
+        389: function(e, n) {},
+        390: function(e, n) {},
+        424: function(e, n, t) {},
+        425: function(e, n, t) {
+            "use strict";
+            t.r(n);
+            var r = t(2),
+                c = t.n(r),
+                o = t(60),
+                a = t.n(o),
+                s = t(7),
+                i = function() {
+                    return Object(s.jsx)("nav", {
+                        className: "navbar",
+                        children: Object(s.jsx)("a", {
+                            href: "/",
+                            children: Object(s.jsx)("img", {
+                                className: "navbar-brand",
+                                src: "https://raw.githubusercontent.com/athaser/crypto-logo/main/logo256.png",
+                                alt: "Karma Nirvami"
+                            })
+                        })
+                    })
+                },
+                l = t(227),
+                u = t(77),
+                b = t(79),
+                f = function() {
+                    return Object(s.jsx)("footer", {
+                        className: "footer-wrapper",
+                        children: Object(s.jsxs)("div", {
+                            className: "footer",
+                            children: [Object(s.jsx)("div", {
+                                className: "footer-left",
+                                children: "Inspired by Network Chunk.",
+                                href: "https://www.youtube.com/watch?v=befUVytFC80"
+                            }), Object(s.jsxs)("div", {
+                                className: "footer-right",
+                                children: [Object(s.jsx)("a", {
+                                    className: "footer-link",
+                                    href: "https://www.facebook.com/Karmanirvami/",
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    children: Object(s.jsx)(u.a, {
+                                        className: "footer-icon",
+                                        icon: b.a
+                                    })
+                                }), Object(s.jsx)("a", {
+                                    className: "footer-link",
+                                    href: "https://www.youtube.com/c/karmanirvami",
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    children: Object(s.jsx)(u.a, {
+                                        className: "footer-icon",
+                                        icon: b.d
+                                    })
+                                })]
+                            })]
+                        })
+                    })
+                },
+                j = (t(12), t(21), t(13), function() {
+                    return Object(s.jsxs)(s.Fragment, {
+                        children: [Object(s.jsx)(i, {}), Object(s.jsx)("main", {
+                            className: "content",
+                            children: Object(s.jsx)(l.a, {})
+                        }), Object(s.jsx)(f, {})]
+                    })
+                });
+            t(423), t(424);
+            a.a.render(Object(s.jsx)(c.a.StrictMode, {
+                children: Object(s.jsx)(j, {})
+            }), document.getElementById("root"))
+        }
+    },
+    [
+        [425, 1, 2]
+    ]
+]);
+//# sourceMappingURL=main.114d694d.chunk.js.map
